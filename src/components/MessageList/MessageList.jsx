@@ -13,7 +13,6 @@ export const MessageList = () => {
   const [messages, loading] = useCollectionData(q);
   const messageContainer = useRef(null);
   useEffect(() => {
-    console.log(messageContainer.current);
     if (messageContainer.current !== null) {
       messageContainer.current.scrollTop =
         messageContainer.current.scrollHeight;
@@ -27,7 +26,7 @@ export const MessageList = () => {
     <div className="messageList">
       <div ref={messageContainer} className="messageList__container">
         {messages.map((message) => (
-          <Message message={message} />
+          <Message key={message.id} message={message} />
         ))}
       </div>
       <SendInput />
