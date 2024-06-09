@@ -1,0 +1,21 @@
+.message {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  column-gap: 16px;
+  max-width: 60%;
+  word-break: break-all;
+  // margin-left: auto;
+
+  &__text {
+    padding: 8px 16px;
+    background: #615ef0;
+    border-radius: 12px;
+    align-self: center;
+  }
+
+  &__avatar {
+    height: 40px;
+    border-radius: 9999px;
+  }
+}

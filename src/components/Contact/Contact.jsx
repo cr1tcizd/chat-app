@@ -1,12 +1,20 @@
 import "./contact.scss";
+import catImg from "./../../assets/cat.png";
 
-export const Contact = () => {
+export const Contact = ({ contact }) => {
+  console.log(contact);
   return (
     <div className="contact">
-      <img className="contact__image" src="" alt="" />
-      <div className="contact__info">
-        <div className="contact__info__name">Elimer Lavetty</div>
-        <div className="contact__info__message">Hello</div>
+      <img className="contact__img" src={contact.photoUrl} alt="" />
+
+      <div className="contact__content">
+        <div className="contact__content__head">
+          <div className="contact__content__head__name">
+            {contact.displayName}
+          </div>
+          <p className="contact__content__head__time">12m</p>
+        </div>
+        <div className="contact__content__message">null</div>
       </div>
     </div>
   );

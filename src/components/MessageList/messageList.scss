@@ -1,0 +1,16 @@
+.messageList {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  height: calc(100% - 76px);
+  padding: 0 24px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+}
