@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import "./login.scss";
-import { Context } from "../../main";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import { useSelector } from "react-redux";
 
 export const Login = () => {
-  const { auth, db } = useContext(Context);
+  const { auth, db } = useSelector((state) => state.auth);
 
   const login = async () => {
     const provider = new GoogleAuthProvider();
@@ -15,6 +14,10 @@ export const Login = () => {
       uid: user.uid,
       displayName: user.displayName,
       photoUrl: user.photoURL,
+    });
+
+    await setDoc(doc(db, "userchats", user.uid), {
+      chats: [],
     });
   };
 

@@ -2,13 +2,13 @@ import "./messageList.scss";
 import { SendInput } from "../SendInput/SendInput";
 import { Message } from "../Message/Message";
 import { useCollectionData } from "react-firebase-hooks/firestore";
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
-import { useContext, useEffect, useRef } from "react";
-import { Context } from "../../main";
+import { collection, orderBy, query } from "firebase/firestore";
+import { useEffect, useRef } from "react";
 import { Loader } from "../Loader/Loader";
+import { useSelector } from "react-redux";
 
 export const MessageList = () => {
-  const { db } = useContext(Context);
+  const { db } = useSelector((state) => state.auth);
   const q = query(collection(db, "messages"), orderBy("createdAt"));
   const [messages, loading] = useCollectionData(q);
   const messageContainer = useRef(null);

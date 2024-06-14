@@ -1,10 +1,9 @@
-import { useContext } from "react";
 import "./message.scss";
-import { Context } from "../../main";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useSelector } from "react-redux";
 
 export const Message = ({ message }) => {
-  const { auth } = useContext(Context);
+  const { auth } = useSelector((state) => state.auth);
   const [user] = useAuthState(auth);
   return (
     <div

@@ -1,13 +1,12 @@
+import "./app.scss";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { AppRouter } from "../AppRouter/AppRouter";
-import "./app.scss";
-import { useContext } from "react";
-import { Context } from "../../main";
 import { Loader } from "../Loader/Loader";
+import { useSelector } from "react-redux";
 
 function App() {
-  const { auth } = useContext(Context);
-  const [user, loading, error] = useAuthState(auth);
+  const { auth } = useSelector((state) => state.auth);
+  const [user, loading] = useAuthState(auth);
 
   if (loading) return <Loader />;
 

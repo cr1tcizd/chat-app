@@ -1,20 +1,20 @@
-import { useContext, useState } from "react";
 import "./sendInput.scss";
-import { Context } from "../../main";
+import { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { v4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { useSelector } from "react-redux";
 
 export const SendInput = () => {
-  const { auth, db } = useContext(Context);
+  const { auth, db } = useSelector((state) => state.auth);
   const [user] = useAuthState(auth);
   const [value, setValue] = useState("");
 
   const sendMessage = async (e) => {
     if (e.key === "Enter" && value.replace(/\s+/g, "")) {
       try {
-        const docRef = await addDoc(collection(db, "messages"), {
-          id: uuid(),
+        await addDoc(collection(db, "messages"), {
+          id: uuidv4(),
           uid: user.uid,
           displayName: user.displayName,
           photoUrl: user.photoURL,

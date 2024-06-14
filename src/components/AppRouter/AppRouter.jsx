@@ -1,12 +1,11 @@
-import { Navigate, Route, Router, Routes, redirect } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Login } from "../Login/Login";
 import { Messenger } from "../Messenger/Messenger";
-import { useContext } from "react";
-import { Context } from "../../main";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useSelector } from "react-redux";
 
 export const AppRouter = () => {
-  const { auth } = useContext(Context);
+  const { auth } = useSelector((state) => state.auth);
   const [user] = useAuthState(auth);
 
   return (
