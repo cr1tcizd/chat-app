@@ -1,8 +1,30 @@
-# React + Vite
+# Messenger in React
+Чат написанный на React с использование облачной базы данных Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Используемые технологии: SCSS, React, React-router, Redux toolkit, Firebase
 
-Currently, two official plugins are available:
+## Возможности:
+- Регистрация и логин с использованием google аккаунта
+- Поиск пользователей для добавления в контакты
+- Отправка текстовых сообщений между пользователями в реальном времени
+- Возможность прикрепления фотографии в сообщениях
+- Смена аватарки пользователя
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Установка
+
+### Клонирование репозитория:
+
+``` git clone https://github.com/cr1tcizd/chat-app.git ```
+
+### Установка зависимостей:
+```
+npm install
+```
+
+### Копируем токен с созданного проекта в Firebase и прикрепляем в файл **token.js** в директории проекта в папке **src**
+![TOKEN](https://github.com/cr1tcizd/chat-app/assets/158553557/542f6867-4faa-426a-98f7-2b643b7f7b98)
+
+### Запуск приложения 
+```
+npm run dev
+```
