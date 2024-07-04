@@ -10,11 +10,12 @@
 
 ### Клонирование репозитория:
 
-> git clone https://github.com/cr1tcizd/chat-app.git
+``` git clone https://github.com/cr1tcizd/chat-app.git ```
 
 ### Установка зависимостей и запуск приложения
 ```
 npm install
-
+```
+```
 npm run dev
 ```
