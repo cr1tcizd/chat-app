@@ -1,4 +1,15 @@
 .messagePanel {
+  flex: 1 1 70%;
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 768px ) {
+  .messagePanel {
+    position: fixed;
+    visibility: hidden;
+  transition: transform 0.2s, opacity 0.2s;
+  }
+ }
+
+

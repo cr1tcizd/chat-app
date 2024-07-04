@@ -1,4 +1,23 @@
 .messenger {
   display: flex;
   height: 100vh;
+
+  &__choice {
+    flex: 1 1 70%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    // background: rgba(97, 94, 240, 0.06);
+  
+    &-txt {
+      background: rgba(97, 94, 240, 0.06);
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+  }
 }
+
+

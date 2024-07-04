@@ -3,14 +3,23 @@
   flex-direction: column;
   justify-content: end;
   width: 100%;
-  height: calc(100% - 76px);
+  height: calc(100% - 77px);
   padding: 0 24px;
 
   &__container {
     display: flex;
     flex-direction: column;
-    row-gap: 16px;
+    row-gap: 10px;
     overflow-y: scroll;
     scrollbar-width: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .messageList {
+
+    &__container {
+      row-gap: 4px;
+    }
   }
 }

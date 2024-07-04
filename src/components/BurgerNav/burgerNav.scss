@@ -1,0 +1,34 @@
+.burgerNav {
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: center;
+  top: 0;
+  left: 0;
+  min-width: 50px;
+  height: 100vh;
+  padding: 20px 16px;
+  // background: rgba($color: #000000, $alpha: 0.3);
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08);
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in-out;
+  
+  &-active {
+    transform: translateX(0%);
+  }
+
+  &__avatar {
+    height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    border-radius: 14px;
+    cursor: pointer;
+  }
+
+  &__setting {
+    margin-top: auto;
+  }
+}

@@ -10,7 +10,6 @@ export const AppRouter = () => {
 
   return (
     <>
-      <button onClick={() => auth.signOut()}>выйти</button>
       <Routes>
         <Route path="*" element={<Navigate to="/messenger" replace />} />
         <Route
