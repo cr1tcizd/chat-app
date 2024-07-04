@@ -21,8 +21,8 @@
 npm install
 ```
 
-### Копируем токен с созданного проекта в Firebase и прикрепляем в файл ** token.js ** в директори проекта в папке ** src **
-![TOKEN](https://github.com/cr1tcizd/chat-app/assets/158553557/bcbb8e89-a2a4-41ba-8387-c7e2dfe69386)
+### Копируем токен с созданного проекта в Firebase и прикрепляем в файл **token.js** в директории проекта в папке **src**
+![TOKEN](https://github.com/cr1tcizd/chat-app/assets/158553557/542f6867-4faa-426a-98f7-2b643b7f7b98)
 
 ### Запуск приложения 
 ```
