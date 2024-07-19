@@ -1,7 +1,7 @@
 # Messenger in React
-Чат написанный на React с использование облачной базы данных Firebase
+Чат написанный на React с использование облачной базы данных Firebase.
 
-Используемые технологии: SCSS, React, React-router, Redux toolkit, Firebase
+Используемые технологии: **SCSS, React, React-router, Redux toolkit, Firebase**.
 
 ## Возможности:
 - Регистрация и логин с использованием google аккаунта
